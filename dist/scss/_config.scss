@@ -1,0 +1,39 @@
+$website-width: 1680px;
+
+$greyBackground: #212121;
+$mainGreen: #0bb14b;
+$mainGrey: #8e979d;
+$mainBlue: #006bb6;
+
+$bg-image: url('../img/rulerflipped.jpg');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: $website-width;
+  margin: auto;
+  overflow: hidden;
+}
+
+.containerImitation {
+  padding: 0 7.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+// Utilities
+.py-2 {
+  padding: 2rem 0 1rem 0;
+}

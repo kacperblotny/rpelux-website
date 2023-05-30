@@ -1,0 +1,390 @@
+@import 'config';
+
+// Utility classes
+.twoObjects {
+  display: flex;
+  justify-content: space-between;
+}
+.twoObjectsEvenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+h1 {
+  font-size: 2.5rem;
+}
+a {
+  max-width: min-content;
+  text-decoration: none;
+  color: white;
+}
+
+// section {
+//   padding: 0 2rem;
+// }
+
+.expander {
+  height: 200vh;
+}
+
+.underLineGrey {
+  border-bottom: $mainGrey 3px solid;
+}
+.underLineBlue {
+  border-bottom: $mainBlue 3px solid;
+}
+.underLineGreen {
+  border-bottom: $mainGreen 3px solid;
+}
+
+// Backgorund body class
+.bodyBackground {
+  background: $bg-image no-repeat center center / cover;
+  // min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+// Contact background
+.bodyBackgroundContact {
+  @extend .bodyBackground;
+  // background: url('../img/ruler5.jpg') no-repeat center center / cover;
+  background: $greyBackground;
+
+  min-height: 100vh;
+}
+// About background
+.bodyBackgroundAbout {
+  background: url('../img/ruler4.jpg') no-repeat center center / cover;
+  // min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+// Standard styling
+.header {
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  height: 100px;
+  background: rgba($color: $greyBackground, $alpha: 0.8);
+  .logo {
+    max-height: 90px;
+    width: auto;
+  }
+
+  .navbar {
+    align-items: center;
+  }
+
+  .link {
+    color: white;
+    margin: 0 1rem;
+    padding-bottom: 5px;
+    font-size: 1.5rem;
+    border-bottom: 3px transparent solid;
+    transition: all 0.5s;
+    &:hover {
+      border-bottom: 3px solid white;
+    }
+  }
+  .currentPage {
+    border-bottom: 3px solid $mainGreen;
+  }
+}
+
+.greenLine {
+  background: $mainGreen;
+  width: 100%;
+  height: 5px;
+}
+.greyLine {
+  background: $mainGrey;
+  width: 100%;
+  height: 5px;
+}
+
+.blueLine {
+  background: $mainBlue;
+  width: 100%;
+  height: 5px;
+}
+
+#mainSection {
+  height: calc(100vh - 100px);
+  display: inline-flex;
+
+  .horizontalLine {
+    max-height: 25rem;
+    margin: 2rem;
+    width: 5px;
+    background: $mainGrey;
+  }
+
+  .textContainer {
+    padding-left: 5rem;
+    padding-top: 5rem;
+    text-align: right;
+    max-width: max-content;
+
+    .mainText {
+      color: white;
+      font-size: 4rem;
+    }
+  }
+  .mainSectionButtons {
+    text-align: left;
+    // height: 282px;
+    padding-top: 6rem;
+    h1 {
+      margin: 1rem;
+      max-width: max-content;
+    }
+    .mainSectionButton {
+      // display: flex;
+      font-size: 1.4rem;
+      background: $mainGrey;
+      padding: 1rem;
+      transition: all 0.5s;
+      &:hover {
+        background: $mainBlue;
+      }
+    }
+  }
+}
+
+#partners {
+  background: $greyBackground no-repeat center center / cover;
+  min-height: max-content;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  padding: 0 7.5rem 2rem 7.5rem;
+  .partnerLogo {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 115px;
+    .partnersIMG {
+      height: 50px;
+
+      //width: 200px;
+    }
+  }
+}
+
+#offerRange {
+  background: $greyBackground;
+  text-align: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+
+  h1 {
+    font-size: 3rem;
+    padding: 2rem 0 1rem 0;
+  }
+  .offerRangeText {
+    padding: 3rem;
+  }
+  .offerTypeText {
+    padding: 2rem 2rem 5rem 2rem;
+    font-family: 'Oswald', sans-serif;
+    h2 {
+      padding: 0 0 0.5rem 0;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      display: inline-flex;
+      // border-bottom: solid 3px $mainGreen;
+    }
+    .offerTitle {
+      font-size: 2.5rem;
+      padding: 0 1rem 0.7rem 1rem;
+      display: inline-flex;
+      margin: 2rem;
+      &Blue {
+        @extend .offerTitle;
+        border-bottom: $mainBlue 3px solid;
+      }
+      &Grey {
+        @extend .offerTitle;
+        border-bottom: $mainGrey 3px solid;
+      }
+      &Green {
+        @extend .offerTitle;
+        border-bottom: $mainGreen 3px solid;
+      }
+    }
+    .gridOffer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1rem;
+      li {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.5rem;
+        list-style-type: none;
+        background: rgba($color: $mainGrey, $alpha: 0.7);
+        border-radius: 5px;
+        padding: 1rem;
+        transition: all 0.5s;
+        &:hover {
+          -webkit-transform: scale(1.05);
+          -ms-transform: scale(1.05);
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+#projects {
+  background: $greyBackground;
+  color: white;
+  font-size: 2rem;
+  .pojectsTitle {
+    font-size: 3rem;
+    padding: 0 1rem 0.7rem 1rem;
+    display: inline-flex;
+    margin: 2rem;
+    border-bottom: $mainBlue 3px solid;
+  }
+  ul {
+    width: 50vw;
+    margin: auto;
+    padding-bottom: 3rem;
+    text-align: left;
+    li {
+      list-style: none;
+      border-bottom: 2px solid white;
+      padding: 1rem 0;
+    }
+    .listItem {
+      display: flex;
+      flex-direction: column;
+    }
+    .smallWorkDetail {
+      font-size: 1.2rem;
+      font-weight: 100;
+      color: rgb(182, 182, 182);
+    }
+    .projectSize {
+      min-width: max-content;
+      padding-left: 0.2rem;
+    }
+  }
+}
+
+// Contact page
+#contact {
+  margin-top: 5rem;
+
+  text-align: left;
+  color: white;
+  font-size: 1.5rem;
+  padding: 3rem;
+
+  iframe {
+    height: 300px;
+  }
+  .companyInfo {
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+    img {
+      height: 70px;
+    }
+  }
+
+  .contactDetailsContainer {
+    align-items: center;
+  }
+  .contactDetails {
+    // max-width: 500px;
+    margin-right: 15rem;
+    // padding-top: 2rem;
+    .contactDetailsInfo {
+      padding: 2rem 0 0 0;
+    }
+  }
+  .horizontalLine {
+    min-height: 550px;
+    width: 5px;
+    background: $mainGrey;
+  }
+
+  .emailAdress {
+    transition: all 0.5s;
+    &:hover {
+      color: $mainGrey;
+    }
+  }
+  .phoneNumber {
+    @extend .emailAdress;
+    display: block;
+    min-width: max-content;
+    font-size: 1.2rem;
+  }
+}
+
+// About page
+#about {
+  padding-top: 8rem;
+  text-align: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+
+  .aboutTextContainer {
+    // background: $greyBackground;
+    background: rgba($color: $greyBackground, $alpha: 0.9);
+    .buttonContainer {
+      padding-bottom: 2rem;
+      .button {
+        background: $mainGrey;
+        padding: 0.3rem 0.7rem;
+        border-radius: 7px;
+        font-size: 1.2rem;
+        margin: 0 1rem;
+        transition: all 0.5s;
+        &:hover {
+          background: $mainBlue;
+        }
+      }
+    }
+  }
+  .aboutText {
+    padding: 3rem;
+    margin: auto;
+    width: 1400px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+  }
+  .aboutSplitter {
+    height: 25rem;
+  }
+}
+
+.footerContact {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+}
+#footer {
+  background: $greyBackground;
+  color: white;
+  height: 3.5rem;
+  display: flex;
+  .footerContent {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    margin: auto;
+    img {
+      height: 3rem;
+    }
+  }
+}
+
+@import 'media';

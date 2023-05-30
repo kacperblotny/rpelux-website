@@ -1,0 +1,610 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1680px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.containerImitation {
+  padding: 0 7.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.py-2 {
+  padding: 2rem 0 1rem 0;
+}
+
+.twoObjects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.twoObjectsEvenly {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+a {
+  max-width: -webkit-min-content;
+  max-width: -moz-min-content;
+  max-width: min-content;
+  text-decoration: none;
+  color: white;
+}
+
+.expander {
+  height: 200vh;
+}
+
+.underLineGrey {
+  border-bottom: #8e979d 3px solid;
+}
+
+.underLineBlue {
+  border-bottom: #006bb6 3px solid;
+}
+
+.underLineGreen {
+  border-bottom: #0bb14b 3px solid;
+}
+
+.bodyBackground, .bodyBackgroundContact {
+  background: url("../img/rulerflipped.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bodyBackgroundContact {
+  background: #212121;
+  min-height: 100vh;
+}
+
+.bodyBackgroundAbout {
+  background: url("../img/ruler4.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.header {
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  height: 100px;
+  background: rgba(33, 33, 33, 0.8);
+}
+.header .logo {
+  max-height: 90px;
+  width: auto;
+}
+.header .navbar {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header .link {
+  color: white;
+  margin: 0 1rem;
+  padding-bottom: 5px;
+  font-size: 1.5rem;
+  border-bottom: 3px transparent solid;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.header .link:hover {
+  border-bottom: 3px solid white;
+}
+.header .currentPage {
+  border-bottom: 3px solid #0bb14b;
+}
+
+.greenLine {
+  background: #0bb14b;
+  width: 100%;
+  height: 5px;
+}
+
+.greyLine {
+  background: #8e979d;
+  width: 100%;
+  height: 5px;
+}
+
+.blueLine {
+  background: #006bb6;
+  width: 100%;
+  height: 5px;
+}
+
+#mainSection {
+  height: calc(100vh - 100px);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+#mainSection .horizontalLine {
+  max-height: 25rem;
+  margin: 2rem;
+  width: 5px;
+  background: #8e979d;
+}
+#mainSection .textContainer {
+  padding-left: 5rem;
+  padding-top: 5rem;
+  text-align: right;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+#mainSection .textContainer .mainText {
+  color: white;
+  font-size: 4rem;
+}
+#mainSection .mainSectionButtons {
+  text-align: left;
+  padding-top: 6rem;
+}
+#mainSection .mainSectionButtons h1 {
+  margin: 1rem;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+#mainSection .mainSectionButtons .mainSectionButton {
+  font-size: 1.4rem;
+  background: #8e979d;
+  padding: 1rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#mainSection .mainSectionButtons .mainSectionButton:hover {
+  background: #006bb6;
+}
+
+#partners {
+  background: #212121 no-repeat center center/cover;
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  padding: 0 7.5rem 2rem 7.5rem;
+}
+#partners .partnerLogo {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 115px;
+}
+#partners .partnerLogo .partnersIMG {
+  height: 50px;
+}
+
+#offerRange {
+  background: #212121;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+}
+#offerRange h1 {
+  font-size: 3rem;
+  padding: 2rem 0 1rem 0;
+}
+#offerRange .offerRangeText {
+  padding: 3rem;
+}
+#offerRange .offerTypeText {
+  padding: 2rem 2rem 5rem 2rem;
+  font-family: "Oswald", sans-serif;
+}
+#offerRange .offerTypeText h2 {
+  padding: 0 0 0.5rem 0;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+#offerRange .offerTypeText .offerTitle, #offerRange .offerTypeText .offerTitleGreen, #offerRange .offerTypeText .offerTitleGrey, #offerRange .offerTypeText .offerTitleBlue {
+  font-size: 2.5rem;
+  padding: 0 1rem 0.7rem 1rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 2rem;
+}
+#offerRange .offerTypeText .offerTitleBlue {
+  border-bottom: #006bb6 3px solid;
+}
+#offerRange .offerTypeText .offerTitleGrey {
+  border-bottom: #8e979d 3px solid;
+}
+#offerRange .offerTypeText .offerTitleGreen {
+  border-bottom: #0bb14b 3px solid;
+}
+#offerRange .offerTypeText .gridOffer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+#offerRange .offerTypeText .gridOffer li {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  list-style-type: none;
+  background: rgba(142, 151, 157, 0.7);
+  border-radius: 5px;
+  padding: 1rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#offerRange .offerTypeText .gridOffer li:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+#projects {
+  background: #212121;
+  color: white;
+  font-size: 2rem;
+}
+#projects .pojectsTitle {
+  font-size: 3rem;
+  padding: 0 1rem 0.7rem 1rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 2rem;
+  border-bottom: #006bb6 3px solid;
+}
+#projects ul {
+  width: 50vw;
+  margin: auto;
+  padding-bottom: 3rem;
+  text-align: left;
+}
+#projects ul li {
+  list-style: none;
+  border-bottom: 2px solid white;
+  padding: 1rem 0;
+}
+#projects ul .listItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+#projects ul .smallWorkDetail {
+  font-size: 1.2rem;
+  font-weight: 100;
+  color: rgb(182, 182, 182);
+}
+#projects ul .projectSize {
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  padding-left: 0.2rem;
+}
+
+#contact {
+  margin-top: 5rem;
+  text-align: left;
+  color: white;
+  font-size: 1.5rem;
+  padding: 3rem;
+}
+#contact iframe {
+  height: 300px;
+}
+#contact .companyInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 2rem;
+}
+#contact .companyInfo img {
+  height: 70px;
+}
+#contact .contactDetailsContainer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#contact .contactDetails {
+  margin-right: 15rem;
+}
+#contact .contactDetails .contactDetailsInfo {
+  padding: 2rem 0 0 0;
+}
+#contact .horizontalLine {
+  min-height: 550px;
+  width: 5px;
+  background: #8e979d;
+}
+#contact .emailAdress, #contact .phoneNumber {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#contact .emailAdress:hover, #contact .phoneNumber:hover {
+  color: #8e979d;
+}
+#contact .phoneNumber {
+  display: block;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  font-size: 1.2rem;
+}
+
+#about {
+  padding-top: 8rem;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+}
+#about .aboutTextContainer {
+  background: rgba(33, 33, 33, 0.9);
+}
+#about .aboutTextContainer .buttonContainer {
+  padding-bottom: 2rem;
+}
+#about .aboutTextContainer .buttonContainer .button {
+  background: #8e979d;
+  padding: 0.3rem 0.7rem;
+  border-radius: 7px;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#about .aboutTextContainer .buttonContainer .button:hover {
+  background: #006bb6;
+}
+#about .aboutText {
+  padding: 3rem;
+  margin: auto;
+  width: 1400px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+#about .aboutSplitter {
+  height: 25rem;
+}
+
+.footerContact {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+}
+
+#footer {
+  background: #212121;
+  color: white;
+  height: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#footer .footerContent {
+  margin-top: auto;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+#footer .footerContent img {
+  height: 3rem;
+}
+
+@media (max-width: 900px) {
+  #about .aboutText {
+    width: 100vw;
+  }
+  #projects .pojectsTitle {
+    font-size: 2.5rem;
+  }
+  #projects ul {
+    width: 90vw;
+  }
+  #projects ul li {
+    list-style: none;
+  }
+  #contact {
+    margin-top: 2rem;
+  }
+  #contact iframe {
+    height: 300px;
+  }
+  #contact .contactMap {
+    text-align: center;
+  }
+  #contact .horizontalLine {
+    display: none;
+  }
+  #contact .twoObjectsEvenly {
+    display: block;
+  }
+  #contact .contactDetails {
+    margin-top: 1rem;
+  }
+  #contact .contactDetailsInfo {
+    font-size: 2rem;
+  }
+  .footerContact {
+    position: inherit;
+    bottom: 0;
+  }
+}
+@media (max-width: 900px) and (max-width: 600px) {
+  .header .links .mainPageLink {
+    display: none;
+  }
+  .header .links .link {
+    font-size: 1.1rem;
+    min-width: -webkit-max-content;
+    min-width: -moz-max-content;
+    min-width: max-content;
+    padding-right: 0.5rem;
+    margin: 0.5rem;
+    border-bottom: 1px solid white;
+  }
+  #mainSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #mainSection .textContainer {
+    text-align: left;
+    padding-left: 3rem;
+  }
+  #mainSection .textContainer .mainText {
+    color: white;
+    font-size: 3rem;
+  }
+  #mainSection .mainSectionButtons {
+    padding-left: 2rem;
+    padding: 0.5rem 0 0 2rem;
+  }
+  #mainSection .horizontalLine {
+    display: none;
+  }
+  #offerRange {
+    font-size: 1rem;
+  }
+  #offerRange .offerTypeText .gridOffer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+  #offerRange h1 {
+    font-size: 2rem;
+    padding: 2rem 0 1rem 0;
+  }
+  #offerRange .offerTypeText .offerTitle, #offerRange .offerTypeText .offerTitleBlue, #offerRange .offerTypeText .offerTitleGrey, #offerRange .offerTypeText .offerTitleGreen {
+    font-size: 1.8rem;
+    margin: 1rem;
+    padding: 0;
+    padding-bottom: 0.5rem;
+  }
+  #about {
+    padding-top: 4rem;
+    font-size: 1.2rem;
+  }
+  #about .aboutText {
+    padding: 1.2rem;
+    font-size: 1.2rem;
+  }
+  #about .aboutSplitter {
+    height: 15rem;
+  }
+  #projects {
+    font-size: 2rem;
+  }
+  #projects .pojectsTitle {
+    font-size: 2rem;
+  }
+  #projects ul {
+    width: 90vw;
+    margin: auto;
+    padding-bottom: 3rem;
+  }
+  #projects ul span {
+    font-size: 1.2rem;
+  }
+  #projects ul li {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  #projects ul .smallWorkDetail {
+    font-size: 0.9rem;
+  }
+  #contact {
+    padding: 0 3rem 3rem 3rem;
+    margin-bottom: 3rem;
+  }
+  #contact h1 {
+    font-size: 2rem;
+  }
+  #contact iframe {
+    display: none;
+  }
+  #contact .twoObjectsEvenly {
+    display: block;
+  }
+  #contact .companyInfo {
+    padding-top: 0rem;
+  }
+  #contact .fullCompanInfo {
+    display: block;
+    padding: 1rem;
+  }
+  #contact .fullCompanInfo p {
+    padding: 0.2rem;
+  }
+  #contact .contactDetails {
+    margin-right: 0rem;
+  }
+  #contact .horizontalLine {
+    display: none;
+  }
+  .footerContact {
+    position: inherit;
+    bottom: 0;
+  }
+}/*# sourceMappingURL=main.css.map */
